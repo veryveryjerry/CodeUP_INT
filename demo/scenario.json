@@ -1,0 +1,36 @@
+{
+  "name": "Calculator Bug Fix Demo",
+  "description": "A Python calculator library with a division-by-zero bug that should return an error instead of crashing",
+  "repository_url": "https://github.com/jpadilla/pyjwt",
+  "demo_scenarios": [
+    {
+      "id": "jwt-decode-fix",
+      "name": "JWT Decode Options Handling",
+      "description": "Fix issue where JWT decode with invalid options doesn't properly validate",
+      "user_request": "The JWT decode function should properly validate the 'options' parameter and raise a clear error when invalid option keys are provided, without breaking existing decode functionality.",
+      "expected_files": ["jwt/api_jwt.py", "jwt/exceptions.py"],
+      "expected_tests": ["tests/test_api_jwt.py"]
+    }
+  ],
+  "builtin_demo": {
+    "name": "Built-in Calculator Demo",
+    "description": "A self-contained demo using a bundled mini-repository with a known bug",
+    "repo_structure": {
+      "calculator/": {
+        "__init__.py": "",
+        "core.py": "Main calculator with division bug",
+        "advanced.py": "Advanced math operations using core",
+        "validator.py": "Input validation",
+        "formatter.py": "Output formatting"
+      },
+      "tests/": {
+        "test_core.py": "Core tests (missing division-by-zero test)",
+        "test_advanced.py": "Advanced operation tests",
+        "conftest.py": "Test fixtures"
+      },
+      "setup.py": "Package setup"
+    },
+    "bug_description": "Division by zero in core.py divide() function crashes instead of returning a proper error response",
+    "user_request": "Fix the division by zero bug in the calculator without breaking existing arithmetic operations"
+  }
+}
