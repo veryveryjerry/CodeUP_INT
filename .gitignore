@@ -1,4 +1,37 @@
+# Dependencies
 node_modules/
-dist/
+venv/
+.venv/
+env/
+*/venv/
+*/.venv/
+
+# Environment and Secrets
 .env
+*.env
+.env.local
+
+# Build outputs
+dist/
+build/
+*.egg-info/
+.eggs/
+
+# Python cache & databases
+__pycache__/
+*.py[cod]
+*$py.class
+*.db
+*.sqlite3
+data/
+backend/data/
+backend/workspace/
+workspace/
+repo_scanner.db
+
+# Logs & temp
+*.log
 .DS_Store
+.vscode/
+.idea/
+.pytest_cache/
